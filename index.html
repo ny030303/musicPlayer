@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="fa/css/all.css">
+    <link rel="stylesheet" href="style.css">
+    <title>부산 음악 페스티벌</title>
+</head>
+<body>
+
+    <div id="sectionWrap">
+<!--        <div class="contextmenu">-->
+<!--            <div>글씨글끼글끼ㅡㄹ씨</div>-->
+<!--            <div>글씨글끼글끼ㅡㄹ씨</div>-->
+<!--            <div>글씨글끼글끼ㅡㄹ씨</div>-->
+<!--        </div>-->
+        <div id="header">
+            <div id="header-list-wrap">
+                <ul id="header-list">
+                    <li>
+                        <a class="home" data-sname="home" style="cursor: pointer">HOME</a>
+                    </li>
+                    <li>
+                        <a class="library" data-sname="library"  style="cursor: pointer">LIBRARY</a>
+                    </li>
+                    <li>
+                        <a class="queue" data-sname="queue"  style="cursor: pointer">QUEUE</a>
+                    </li>
+                    <li>
+                        <a class="login" data-sname="login"  style="cursor: pointer">LOGIN</a>
+                    </li>
+                </ul>
+            </div>
+            <a id="logoWrap" href="index.html"></a>
+            <div id="searchWrap">
+                <i class="fas fa-search" style="margin: 0 0 0 5px;"></i>
+                <input id="searchInput" type="search" placeholder="Search...">
+            </div>
+        </div>
+        <section id="home" class="sectActive">
+            <div class="sectPadding"></div>
+            <div class="mainDark"></div>
+
+            <div id="homeImage">
+                <div class="mainBox">
+                    <div class="titleStyle2">Music & More.</div>
+                    <div style="color: #fff">당신의 취향을 저격하는 새로운 음악을 발견하세요.</div>
+                    <div class="whiteBox">
+                        <div class="sideMusicImage2" style="top:35%; left: -310px;background-image: url('covers/청소는빛이나는솔로.jpg');box-shadow: 0px 4px 6px 1px #6f5b5b;"></div>
+                        <div class="sideMusicImage" style="top: 25%;left: -130px; box-shadow: 0px 4px 6px 1px #6f5b5b;"></div>
+                        <div class="musicImage" style="z-index: 1; box-shadow: 0px 4px 6px 1px #503838;"></div>
+                        <div class="sideMusicImage" style="top: 25%; left: 230px;background-image: url('covers/아이돌.jpg');box-shadow: 0px 4px 6px 1px #6f5b5b;"></div>
+                        <div class="sideMusicImage2" style="top: 35%; left: 460px;background-image: url('covers/헤어져뭐시기.jpg');box-shadow: 0px 4px 6px 1px #6f5b5b;"></div>
+                    </div>
+                </div>
+                <div id="misicGraph">
+                    <div id="queueNowEq"></div>
+                </div>
+            </div>
+            <div class="sectPadding"></div>
+            <div id="homeContents">
+                <div id="recommendWrap">
+                    <div class="contentsTitleStyle">추천 음악 〉</div>
+                    <div class="musicsWrap">
+                        <div class="mainMusic">
+                            <div class="musicImage"></div>
+                            <div class="titleStyle">노래 제목</div>
+                            <div class="artistStyle">아티스트</div>
+                        </div>
+                        <div class="mainMusic">
+                            <div class="musicImage"></div>
+                            <div class="titleStyle">노래 제목</div>
+                            <div class="artistStyle">아티스트</div>
+                        </div>
+                        <div class="mainMusic">
+                            <div class="musicImage"></div>
+                            <div class="titleStyle">노래 제목</div>
+                            <div class="artistStyle">아티스트</div>
+                        </div>
+                        <div class="mainMusic">
+                            <div class="musicImage"></div>
+                            <div class="titleStyle">노래 제목</div>
+                            <div class="artistStyle">아티스트</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="balladeWrap">
+                    <div class="contentsTitleStyle">발라드 〉</div>
+                    <div class="musicsWrap">
+                        <div class="mainMusic">
+                            <div class="musicImage"></div>
+                            <div class="titleStyle">노래 제목</div>
+                            <div class="artistStyle">아티스트</div>
+                        </div>
+                        <div class="mainMusic">
+                            <div class="musicImage"></div>
+                            <div class="titleStyle">노래 제목</div>
+                            <div class="artistStyle">아티스트</div>
+                        </div>
+                        <div class="mainMusic">
+                            <div class="musicImage"></div>
+                            <div class="titleStyle">노래 제목</div>
+                            <div class="artistStyle">아티스트</div>
+                        </div>
+                        <div class="mainMusic">
+                            <div class="musicImage"></div>
+                            <div class="titleStyle">노래 제목</div>
+                            <div class="artistStyle">아티스트</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="library">
+            <div class="wrapper">
+                <div id="libListsBtns">
+                    <div class="libBtnActive libBtn1">최근 들은 음악</div>
+                    <div class="libBtn2">마이 리스트</div>
+                </div>
+                <div id="libLatelyList" class="libList libActive">
+                    <div class="listMusic">
+                        <p class="musicImage1"></p>
+                        <div class="musicTitle">title</div>
+                        <div class="musicText">아티스트</div>
+                        <div class="musicText">앨범 제목</div>
+                    </div>
+
+                    <div class="listMusic">
+                        <p class="musicImage1"></p>
+                        <div class="musicTitle">title</div>
+                        <div class="musicText">아티스트</div>
+                        <div class="musicText">앨범 제목</div>
+                    </div>
+
+                    <div class="listMusic">
+                        <p class="musicImage1"></p>
+                        <div class="musicTitle">title</div>
+                        <div class="musicText">아티스트</div>
+                        <div class="musicText">앨범 제목</div>
+                    </div>
+
+                    <div class="listMusic">
+                        <p class="musicImage1"></p>
+                        <div class="musicTitle">title</div>
+                        <div class="musicText">아티스트</div>
+                        <div class="musicText">앨범 제목</div>
+                    </div>
+
+                    <div class="listMusic">
+                        <p class="musicImage1"></p>
+                        <div class="musicTitle">title</div>
+                        <div class="musicText">아티스트</div>
+                        <div class="musicText">앨범 제목</div>
+                    </div>
+                </div>
+<!--                <div class="sectPadding"></div>-->
+                <div id="libMyList" class="libList">
+                    <div class="listMusic">
+                        <p class="musicImage1"></p>
+                        <div class="musicTitle">title</div>
+                        <div class="musicText">곡 수: 4곡</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="playList">
+            <div class="wrapper">
+                <div class="listTitleStyle">
+                    LIST MUSIC<br>
+                    <span>곡 수: 4개<i class="fas fa-play subIconStyle" style="margin: 0 0 0 30px"></i></span>
+                </div>
+                <div class="libList">
+                    <div></div>
+                    <div class="listMusic">
+                        <p class="musicImage1"></p>
+                        <div class="musicTitle">title</div>
+                        <div class="musicText">아티스트</div>
+                        <div class="musicText">앨범 제목</div>
+                        <div>
+                            <i class="fas fa-folder-plus subIconStyle putQueueBtn"></i>
+                        </div>
+                    </div>
+
+                    <div class="listMusic">
+                        <p class="musicImage1"></p>
+                        <div class="musicTitle">title</div>
+                        <div class="musicText">아티스트</div>
+                        <div class="musicText">앨범 제목</div>
+                        <div>
+                            <i class="fas fa-folder-plus subIconStyle putQueueBtn"></i>
+                        </div>
+                    </div>
+
+                    <div class="listMusic">
+                        <p class="musicImage1"></p>
+                        <div class="musicTitle">title</div>
+                        <div class="musicText">아티스트</div>
+                        <div class="musicText">앨범 제목</div>
+                        <div>
+                            <i class="fas fa-folder-plus subIconStyle putQueueBtn"></i>
+                        </div>
+                    </div>
+
+                    <div class="listMusic">
+                        <p class="musicImage1"></p>
+                        <div class="musicTitle">title</div>
+                        <div class="musicText">아티스트</div>
+                        <div class="musicText">앨범 제목</div>
+                        <div>
+                            <i class="fas fa-folder-plus subIconStyle putQueueBtn"></i>
+                        </div>
+                    </div>
+
+                    <div class="listMusic">
+                        <p class="musicImage1"></p>
+                        <div class="musicTitle">title</div>
+                        <div class="musicText">아티스트</div>
+                        <div class="musicText">앨범 제목</div>
+                        <div>
+                            <i class="fas fa-folder-plus subIconStyle putQueueBtn"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="queue">
+            <div class="dark">
+                <div id="queueNowMusic"></div>
+                <div id="queueList">
+                    <div class="queueMusic">
+                        <p class="musicImage1"></p>
+                        <div class="queueMTitle">음악제목</div>
+                        <div class="queueMText">아티스트</div>
+                        <div class="queueMText">앨범제목</div>
+                        <div class="queueMText">3:14</div>
+                    </div>
+                    <div class="queueMusic">
+                        <p class="musicImage1"></p>
+                        <div class="queueMTitle">음악제목</div>
+                        <div class="queueMText">아티스트</div>
+                        <div class="queueMText">앨범제목</div>
+                        <div class="queueMText">3:14</div>
+                    </div>
+                    <div class="queueMusic">
+                        <p class="musicImage1"></p>
+                        <div class="queueMTitle">음악제목</div>
+                        <div class="queueMText">아티스트</div>
+                        <div class="queueMText">앨범제목</div>
+                        <div class="queueMText">3:14</div>
+                    </div>
+                    <div class="queueMusic">
+                        <p class="musicImage1"></p>
+                        <div class="queueMTitle">음악제목</div>
+                        <div class="queueMText">아티스트</div>
+                        <div class="queueMText">앨범제목</div>
+                        <div class="queueMText">3:14</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section id="login">
+            <div class="wrapper">
+
+                <div id="loginBox">
+                    <div class="logoImage"></div>
+                    <input type="text" class="loginInputStyle" id="loginId" placeholder="Id">
+                    <input type="password" class="loginInputStyle" id="loginPwd"  placeholder="PassWord">
+                    <button id="loginBtn">Login</button>
+                </div>
+            </div>
+        </section>
+
+
+
+        <div id="musicPlayer">
+            <div id="mpBarWrap">
+                <div id="mpBar" class=".mpBarTransition"></div>
+<!--                <div id="mpDark"></div>-->
+            </div>
+            <div id="mpDark"></div>
+            <div id="mpIconWrap">
+                <i class="fas fa-bars subIconStyle"></i>
+
+                <i class="fas fa-step-backward centerIconStyle"></i>
+                <i class="fas fa-play centerIconStyle" id="playBtn" ></i>
+                <i class="fas fa-step-forward centerIconStyle"></i>
+                <i class="fas fa-times subIconStyle" id="isloopBtn"></i>
+                <!--            <i class="fas fa-sync-alt"></i>-->
+                <!--            <i class="fas fa-times"></i>-->
+            </div>
+            <div id="mpImage"></div>
+            <div id="mpTitle">
+                <div id="musicName1">음악 이름</div>
+                <div id="musicName2">앨범 이름</div>
+            </div>
+            <div id="mpLyricsWrap">
+                <div class="sideLyrics" id="prevLyrics">이전 가사</div>
+                <div id="nowLyrics">현재 가사영역</div>
+                <div class="sideLyrics" id="nextLyrics">다음 가사</div>
+            </div>
+
+            <div id="mpVolumeWrap">
+                <i class="fas fa-volume-up subIconStyle"></i>
+                <div id="mpVolumeBarWrap">
+                    <div id="mpVolumeBar"></div>
+                </div>
+            </div>
+
+            <div id="mpTimeWrap">0:00 / 3:14</div>
+
+            <div id="mpQueueBtn">
+                <i class="fas fa-list subIconStyle" style="font-size: 25px;"></i>
+            </div>
+            <audio src="music/나만봄.mp3" controls="" type="audio/mpeg" style="display: none"></audio>
+        </div>
+    </div>
+    <div class="myListPopup">
+        <div class="popupListWrap">
+            <div class="popupList">
+                <input type="checkbox" class="popupListContent">
+                <div class="popupListContent">text</div>
+            </div>
+
+            <div class="popupList">
+                <input type="checkbox" class="popupListContent">
+                <div class="popupListContent">text2</div>
+            </div>
+
+            <div class="popupList">
+                <input type="checkbox" class="popupListContent">
+                <div class="popupListContent">textsdafadf</div>
+            </div>
+
+            <div class="popupList">
+                <input type="checkbox" class="popupListContent">
+                <div class="popupListContent">texsdfdfdsfzafasdfasdfadsasdfsadfvasdfsdt</div>
+            </div>
+        </div>
+        <div id="myListPopupAddListBtn">새 리스트</div>
+        <div id="myListPopupCloseBtn">닫기</div>
+    </div>
+</body>
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/Music.js"></script>
+<script src="js/List.js"></script>
+<script src="js/Queue.js"></script>
+<script src="js/eqSpectrum.js"></script>
+<script src="js/script.js"></script>
+</html>

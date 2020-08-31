@@ -1,0 +1,790 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #666;
+}
+
+.sectPadding {
+    padding-top: 60px;
+}
+
+.contentsTitleStyle {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.titleStyle {
+    font-size: 18px;
+    font-weight: bold;
+    width: 300px;
+}
+
+.artistStyle {
+    font-size: 15px;
+}
+
+.titleStyle2 {
+    font-size: 41px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.whiteBox {
+    width: 300px;
+    height: 500px;
+    border-radius: 5px;
+    /*background-color: #fff;*/
+    margin: 50px auto;
+    position: relative;
+    display: flex;
+}
+
+.sideMusicImage {
+    width: 200px;
+    height: 200px;
+    background-image: url("covers/가을아침.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    position: absolute;
+}
+
+.sideMusicImage2 {
+    width: 150px;
+    height: 150px;
+    background-image: url("covers/가을아침.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    position: absolute;
+}
+
+
+.wrapper {
+    margin: 60px auto 0 auto;
+    width: 1000px;
+}
+
+section {
+    display: none;
+}
+
+.sectActive {
+    display: block;
+}
+
+
+/*======header========*/
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    /* background-color: rgba(25,25,25,.97); */
+    /* background-color: #ff253a; */
+    background-color: #fff;
+    border-bottom: 1px solid #efefef;
+    z-index: 3;
+}
+
+
+#header-list-wrap {
+    /* width: 100%; */
+    /* display: flex; */
+    position: absolute;
+    right: 0;
+    top: 27%;
+}
+
+#header-list {
+    display: flex;
+    width: 350px;
+    text-align: center;
+}
+
+#header-list li {
+    flex: 1;
+}
+
+#searchWrap {
+    width: 60%;
+    height: 35px;
+    border: 0;
+    background-color: #eee;
+    margin: 10px 0 0 80px;
+    border-radius: 5px;
+}
+
+#searchInput {
+    width: 96%;
+    height: 28px;
+    margin: 5px 0;
+    border: 0;
+    background-color: rgba(0, 0, 0, 0);
+    outline: none;
+}
+
+/*#searchInput:focus {*/
+/*    */
+/*}*/
+
+
+#logoWrap {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-image: url("covers/logo.png");
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/*==================home===============*/
+#home {
+    width: 100%;
+    height: 2100px;
+    position: relative;
+    overflow: hidden;
+}
+
+#homeWrapper {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+#homeContents {
+    display: block;
+    width: 1250px;
+    margin: 20px auto;
+}
+
+#recommendWrap {
+
+}
+
+.musicsWrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.musicImage {
+    width: 300px;
+    height: 300px;
+    background-image: url("covers/여행.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+}
+
+
+.musicImage:hover > i {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.mainIStyle {
+    font-size: 28px;
+    margin: 253px 0 0 257px;
+    display: none
+}
+
+/*#FC5C7D ff5e62*/
+#homeImage {
+    background-image: linear-gradient(to top, #6C5B7B, #C06C84, #FC5C7D);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 800px;
+    display: flex;
+    /*opacity: 0.3;*/
+    position: relative;
+}
+
+.mainBox {
+    width: 1400px;
+    height: 750px;
+    /*background-color: rgba(0,0,0,0.3);*/
+    display: block;
+    margin: 30px auto 0 auto;
+    text-align: center;
+}
+
+
+.whiteBox .sideMusicImage2:hover {
+    transform: translateY(-10px);
+    transition: .6s;
+    cursor: pointer;
+}
+
+.whiteBox .sideMusicImage:hover {
+    transform: translateY(-10px);
+    transition: .6s;
+    cursor: pointer;
+}
+
+.whiteBox .musicImage:hover {
+    transform: translateY(-10px);
+    transition: .6s;
+    cursor: pointer;
+}
+
+#misicGraph {
+    width: 1029px;
+    height: 150px;
+    /* background-color: rgba(0,0,0,0.3); */
+    /* text-align: center; */
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#queueNowEq {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#queueNowEq > div {
+    align-content: flex-end;
+    height: 100%;
+    background-image: linear-gradient(to top, white, #fc5c7d);
+}
+
+
+/*========================*/
+/*=======library==========*/
+#library {
+    width: 100%;
+    height: 900px;
+    position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-bottom: 66px;
+}
+
+#libListsBtns {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+#libListsBtns div {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: #fc5c7d;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#libListsBtns div:hover {
+    background-color: #e65775;
+}
+
+.libList {
+    background-color: #ffe7e7;
+    border-radius: 5px;
+    padding: 5px;
+    display: none;
+}
+
+.musicImage1 {
+    background-image: url("covers/나만봄.jpg");
+    width: 60px;
+    height: 60px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.listMusic .musicImage1 {
+    margin: 5px;
+}
+
+.listMusic {
+    display: flex;
+    margin: 10px;
+    text-align: center;
+    background-color: #fff;
+    font-weight: bold;
+    color: #523f28;
+    cursor: pointer;
+}
+
+.listMusic:hover {
+    background-color: #ffc3b7;
+}
+
+.listMusic div {
+    flex: 1;
+    padding: 19px 0;
+    display: inline-block;
+}
+
+.libActive {
+    display: block;
+}
+
+.libBtnActive {
+    background-color: #e65775 !important;
+}
+
+/*=========================*/
+/*=====musicPlayer=======*/
+
+#musicPlayer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 84px;
+    background-color: rgba(25, 25, 25, .97);
+    display: flex;
+    z-index: 3;
+}
+
+#musicPlayer:hover {
+    transition: .3s;
+    background-color: rgba(25, 25, 25, .99);
+}
+
+/*----재생 영역------*/
+#mpBar {
+    width: 0%;
+    height: 3px;
+    background-color: #ff253a;
+}
+
+#mpBarWrap {
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    top: 0;
+    cursor: pointer;
+    z-index: 1;
+    transition: .6s;
+}
+
+#mpDark {
+    height: 0;
+}
+
+#mpBarWrap:hover {
+    transition: .6s;
+    height: 20px;
+}
+
+.mpBarTransitionOn {
+    transition: .0s;
+}
+
+#mpBarWrap:hover + #mpDark {
+    transition: .6s;
+    width: 100%;
+    height: 105px;
+    position: absolute;
+    top: 0;
+    background-color: rgba(25, 25, 25, .65);
+}
+
+#mpBarWrap:hover #mpBar {
+    height: 20px;
+}
+
+/*-------------*/
+/*----icon 영역-----*/
+
+#mpIconWrap {
+    margin: auto auto;
+}
+
+.subIconStyle {
+    color: #aaa;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+.subIconStyle:hover {
+    color: #6d6d6d;
+    transform: scale(1.1);
+}
+
+.centerIconStyle {
+    color: #eee;
+    font-size: 25px;
+    margin: 0 12px;
+    cursor: pointer;
+}
+
+.centerIconStyle:hover {
+    transform: scale(1.1);
+}
+
+#playBtn {
+    color: #ff253a;
+    /*color: aqua;*/
+}
+
+#playBtn:hover {
+    color: #da1c2f;
+    /*color: aqua;*/
+}
+
+/*-----------------*/
+
+#mpImage {
+    width: 70px;
+    height: 70px;
+    background-image: url("covers/여행.jpg");
+    background-size: contain;
+    position: absolute;
+    z-index: -1;
+    left: 20px;
+    top: 7px;
+}
+
+#mpTitle {
+    position: absolute;
+    z-index: -1;
+    left: 110px;
+    top: 16px;
+    color: #fff;
+    font-size: 17px;
+}
+
+#musicName2 {
+    color: #aaa;
+    width: 150px;
+    font-size: 14px;
+    /* text-overflow: ellipsis; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+#mpLyricsWrap {
+    position: absolute;
+    z-index: -1;
+    left: 20%;
+    top: 10px;
+    color: #666;
+    /*flex: 1;*/
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 15px;
+}
+
+#nowLyrics {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.sideLyrics {
+
+}
+
+/*-------볼륨 영역-------*/
+#mpVolumeWrap {
+    position: absolute;
+    top: 42%;
+    right: 15%;
+    display: flex;
+    z-index: -1;
+}
+
+#mpVolumeBarWrap {
+    width: 110px;
+    height: 3px;
+    margin: auto 6px;
+    background-color: #666;
+    cursor: pointer;
+    position: relative;
+}
+
+#mpVolumeBarWrap:hover {
+    height: 9px;
+}
+
+#mpVolumeBarWrap:hover #mpVolumeBar {
+    height: 9px;
+}
+
+#mpVolumeBar {
+    width: 100%;
+    height: 3px;
+    background-color: #aaa;
+    cursor: pointer;
+}
+
+/*-----queue 버튼--------*/
+
+#mpQueueBtn {
+    position: absolute;
+    top: 35%;
+    right: 2%;
+    display: flex;
+    z-index: -1;
+}
+
+/*----------------------------*/
+/*------시간 영역---------*/
+
+#mpTimeWrap {
+    color: #fff;
+    position: absolute;
+    top: 44%;
+    right: 27%;
+    z-index: -1;
+}
+
+
+/*==============queue==============*/
+
+.dark {
+    width: 100%;
+    height: 100%;
+    /*position: fixed;*/
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#queue {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    display: none;
+}
+
+#queueNowMusic {
+    background-image: url(covers/가을아침.jpg);
+    width: 550px;
+    height: 550px;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#queueList {
+    width: 30%;
+    height: 85%;
+    position: absolute;
+    right: -17px;
+    top: 6%;
+    overflow-y: scroll;
+    background-color: #252525;
+    padding: 5px 0;
+}
+
+.queueMusic .musicImage1 {
+    margin: 5px;
+    width: 44px;
+    height: 44px;
+}
+
+.queueMusic {
+    display: flex;
+    text-align: center;
+    color: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.queueMusic:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.queueMusicActive {
+    background-color: #f94c5c !important;
+}
+
+.queueMusic div {
+    flex: 1;
+    padding: 19px 0;
+    display: inline-block;
+}
+
+/*=======playlist=========*/
+#playList {
+    width: 100%;
+    height: 900px;
+    position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-bottom: 66px;
+}
+
+.listTitleStyle {
+    text-align: center;
+    margin: 0 auto 30px auto;
+    display: block;
+    width: 21%;
+    border-bottom: 2px solid #563030;
+    padding: 10px 0;
+    font-size: 25px;
+    line-height: 24px;
+}
+
+.listTitleStyle span {
+    font-size: 15px;
+}
+
+.putQueueBtn {
+    flex: 1;
+    font-size: 30px;
+}
+
+/*=======login============*/
+
+#login {
+    width: 100%;
+    height: 100%;
+}
+
+#loginBox {
+    display: flex;
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+}
+
+
+.loginInputStyle {
+    width: 447px;
+    height: 40px;
+    margin: 0 0 11px 0;
+    border-radius: 23px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 3px 10px 1px #ddd;
+    padding: 10px;
+    outline: none;
+    font-size: 15px;
+    color: #444;
+}
+
+#loginBtn {
+    border: none;
+    width: 190px;
+    height: 40px;
+    font-size: 15px;
+    color: #fff;
+    background-color: #fc5c7d;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    border-radius: 6px;
+    transition: .3s;
+}
+
+#loginBtn:hover {
+    background-color: #e65775;
+}
+
+.logoImage {
+    background-image: url(covers/logo.png);
+    width: 200px;
+    height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
+    margin: 0 auto 30px auto;
+}
+
+/*=============================*/
+/*======context 메뉴===========*/
+.contextmenu {
+    position: absolute;
+    /*top: 100px;*/
+    background-color: #333;
+    z-index: 5;
+}
+
+.contextmenu div {
+    color: #fff;
+    padding: 5px;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contextmenu div:hover {
+    background-color: #222;
+}
+/*=============================*/
+/*========myListPopup =========*/
+
+.myListPopup {
+    position: fixed;
+    width: 300px;
+    height: 85.4%;
+    left: -17px;
+    top: 6%;
+    background-color: rgba(15,15,15,0.91);
+    padding: 5px 0;
+    overflow: hidden;
+    display: none;
+}
+
+#myListPopupAddListBtn {
+    position: absolute;
+    bottom: 10px;
+    left: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#myListPopupCloseBtn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.popupListWrap {
+    color: #fff;
+    /* display: flex; */
+    overflow-y: scroll;
+    direction: rtl;
+    width: 100%;
+    height: 80%;
+    overflow-x: hidden;
+}
+
+.popupList {
+    width: 100%;
+    height: 50px;
+    display: flex;
+}
+
+.popupListContent {
+    margin: auto 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

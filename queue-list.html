@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="fa/css/all.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="js/jquery-3.3.1.js"></script>
+    <title>부산 음악 페스티벌</title>
+    <style>
+        * {
+            user-select: none;
+        }
+
+        [draggable] {
+
+        }
+
+        .queueMusic {
+            padding-bottom: 1px;
+            padding-top: 1px;
+            text-align: center;
+            cursor: move;
+        }
+
+        .dragElm {
+            opacity: 0.1;
+        }
+    </style>
+    <script type="text/javascript">
+      let dragIdx = -1;
+      let dragElm = null;
+
+      function handleDragStart(e) {
+        dragIdx = $('#queueList > div').index(e.target);
+        dragElm = $(e.target);
+        dragElm.addClass('dragElm');
+        e.originalEvent.dataTransfer.effectAllowed = 'move';
+      }
+
+      function handleDragOver(e) {
+        if (e.preventDefault) {
+          e.preventDefault(); // Necessary. Allows us to drop.
+        }
+        let targetElm = $(e.target);
+        while (!targetElm.hasClass('queueMusic')) {
+          targetElm = targetElm.parent();
+        }
+        let upDirection = (e.target.clientHeight / 2) > e.offsetY;
+        let addIdx = ($('#queueList > div').index(targetElm)) + (upDirection ? -1 : 1);
+        if( addIdx != dragIdx ) {
+          const queueDivElms = $('#queueList > div');
+
+          addIdx--;
+          queueDivElms.remove(dragElm);
+          if( addIdx < 0 ) {
+            queueDivElms.eq(0).before(dragElm).slideDown('slow');
+          }
+          else {
+            queueDivElms.eq(addIdx).after(dragElm).slideDown('slow');
+          }
+          dragIdx = addIdx;
+        }
+        return false;
+      }
+
+      function handleDragEnd(e) {
+        dragElm.removeClass('dragElm');
+      }
+
+      window.onload = () => {
+        $('#queueList > div').on('dragstart', handleDragStart);
+        $('#queueList > div').on('dragover', handleDragOver);
+        $('#queueList > div').on('dragend', handleDragEnd);
+      }
+    </script>
+</head>
+<body>
+
+<div id="sectionWrap">
+    <div id="queue" style="display: block">
+        <div class="dark">
+            <div id="queueNowMusic"></div>
+            <div id="queueList">
+                <div class="queueMusic" draggable="true">
+                    <div class="musicImage1"></div>
+                    <div class="queueMTitle">음악제목1</div>
+                    <div class="queueMText">아티스트1</div>
+                    <div class="queueMText">앨범제목1</div>
+                    <div class="queueMText">1:11</div>
+                </div>
+                <div class="queueMusic" draggable="true">
+                    <div class="musicImage1"></div>
+                    <div class="queueMTitle">음악제목2</div>
+                    <div class="queueMText">아티스트2</div>
+                    <div class="queueMText">앨범제목2</div>
+                    <div class="queueMText">2:22</div>
+                </div>
+                <div class="queueMusic" draggable="true">
+                    <div class="musicImage1"></div>
+                    <div class="queueMTitle">음악제목3</div>
+                    <div class="queueMText">아티스트3</div>
+                    <div class="queueMText">앨범제목3</div>
+                    <div class="queueMText">3:33</div>
+                </div>
+                <div class="queueMusic" draggable="true">
+                    <div class="musicImage1"></div>
+                    <div class="queueMTitle">음악제목5</div>
+                    <div class="queueMText">아티스트5</div>
+                    <div class="queueMText">앨범제목5</div>
+                    <div class="queueMText">5:55</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
